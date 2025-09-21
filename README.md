@@ -58,6 +58,7 @@ npm run dev
 ```bash
 npm run build
 ```
+---
 
 ## 🔗 BlockDAG Wallet Setup
 
@@ -73,11 +74,15 @@ Currency Symbol: BDAG
 
 Explorer: https://explorer.blockdag.network
 
+---
+
 ## 📜 Smart Contracts
 
 Prediction Market: 0x0fdBEc0AA9Ae4E1D5e32A177b7bE2c61E332d11A
 
 SecureScan Token (SCAN): 0xAf1abA8C1Ef0b5286b3b408A62227a42CAC66811
+
+---
 
 ## 🚀 Roadmap
 
@@ -90,6 +95,8 @@ SecureScan Token (SCAN): 0xAf1abA8C1Ef0b5286b3b408A62227a42CAC66811
 🔄 Advanced vulnerability scanner (AI-powered)
 
 🔮 Governance DAO for community-driven resolutions
+
+---
 
 ## 🤝 Contributing
 
@@ -105,10 +112,14 @@ Push to branch (git push origin feature/new-feature)
 
 Open a Pull Request
 
+---
+
 ## 📄 License
 
 Distributed under the MIT License.
 See LICENSE for details.
+
+---
 
 ## 💡 About SecureScan
 
