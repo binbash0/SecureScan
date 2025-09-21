@@ -16,12 +16,12 @@ This hybrid approach fosters **transparency, community intelligence, and real-ti
 ---
 
 ## ⚡ Key Features
-- 🔗 **BlockDAG Integration** — scalable, low-fee, fast finality blockchain  
-- 🦊 **Wallet Connection** — MetaMask (with auto BlockDAG switch)  
-- 🔒 **SecureScan Token (SCAN)** — native ERC-20 token used for staking, voting, and rewards  
-- 📊 **Prediction Market** — stake tokens to predict whether contracts are safe or vulnerable  
-- 🛡 **Smart Contract Scanner** — automated checks for vulnerabilities (reentrancy, overflow, etc.)  
-- 🏆 **Incentives** — correct predictions earn rewards; malicious votes are penalized  
+- 🔗 **BlockDAG Integration** : scalable, low-fee, fast finality blockchain  
+- 🦊 **Wallet Connection** : MetaMask (with auto BlockDAG switch)  
+- 🔒 **SecureScan Token (SCAN)** : native ERC-20 token used for staking, voting, and rewards  
+- 📊 **Prediction Market** : stake tokens to predict whether contracts are safe or vulnerable  
+- 🛡 **Smart Contract Scanner** : automated checks for vulnerabilities (reentrancy, overflow, etc.)  
+- 🏆 **Incentives** : correct predictions earn rewards; malicious votes are penalized  
 
 ---
 
@@ -75,11 +75,9 @@ Explorer: https://explorer.blockdag.network
 
 ## 📜 Smart Contracts
 
-Prediction Market: 0x...
+Prediction Market: 0x0fdBEc0AA9Ae4E1D5e32A177b7bE2c61E332d11A
 
-SecureScan Token (SCAN): 0x...
-
-⚠️ Update with deployed addresses after contract deployment.
+SecureScan Token (SCAN): 0xAf1abA8C1Ef0b5286b3b408A62227a42CAC66811
 
 ## 🚀 Roadmap
 
