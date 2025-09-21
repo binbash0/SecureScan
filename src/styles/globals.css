@@ -1,0 +1,555 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #0a0a0f;
+  --foreground: #e2e8f0;
+  --card: #0f0f17;
+  --card-foreground: #e2e8f0;
+  --popover: #0f0f17;
+  --popover-foreground: #e2e8f0;
+  --primary: #00d4ff;
+  --primary-foreground: #0a0a0f;
+  --secondary: #1a1a2e;
+  --secondary-foreground: #e2e8f0;
+  --muted: #16162a;
+  --muted-foreground: #94a3b8;
+  --accent: #16213e;
+  --accent-foreground: #00d4ff;
+  --destructive: #ff0080;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 212, 255, 0.2);
+  --input: rgba(0, 212, 255, 0.1);
+  --input-background: #16162a;
+  --switch-background: #1a1a2e;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #00d4ff;
+  --chart-1: #00d4ff;
+  --chart-2: #00ff88;
+  --chart-3: #ff0080;
+  --chart-4: #ffaa00;
+  --chart-5: #aa00ff;
+  --radius: 0.625rem;
+  --sidebar: #0f0f17;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #00d4ff;
+  --sidebar-primary-foreground: #0a0a0f;
+  --sidebar-accent: #16213e;
+  --sidebar-accent-foreground: #00d4ff;
+  --sidebar-border: rgba(0, 212, 255, 0.2);
+  --sidebar-ring: #00d4ff;
+}
+
+.dark {
+  --background: #0a0a0f;
+  --foreground: #e2e8f0;
+  --card: #0f0f17;
+  --card-foreground: #e2e8f0;
+  --popover: #0f0f17;
+  --popover-foreground: #e2e8f0;
+  --primary: #00d4ff;
+  --primary-foreground: #0a0a0f;
+  --secondary: #1a1a2e;
+  --secondary-foreground: #e2e8f0;
+  --muted: #16162a;
+  --muted-foreground: #94a3b8;
+  --accent: #16213e;
+  --accent-foreground: #00d4ff;
+  --destructive: #ff0080;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 212, 255, 0.2);
+  --input: rgba(0, 212, 255, 0.1);
+  --ring: #00d4ff;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #00d4ff;
+  --chart-2: #00ff88;
+  --chart-3: #ff0080;
+  --chart-4: #ffaa00;
+  --chart-5: #aa00ff;
+  --sidebar: #0f0f17;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #00d4ff;
+  --sidebar-primary-foreground: #0a0a0f;
+  --sidebar-accent: #16213e;
+  --sidebar-accent-foreground: #00d4ff;
+  --sidebar-border: rgba(0, 212, 255, 0.2);
+  --sidebar-ring: #00d4ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(170, 0, 255, 0.08) 0%, transparent 50%),
+      linear-gradient(135deg, #0a0a0f 0%, #0f0f17 100%);
+  }
+}
+
+/* Minimal Neon Animations */
+@keyframes neonPulse {
+  0%, 100% { 
+    opacity: 0.6; 
+    filter: blur(0px);
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 1; 
+    filter: blur(1px);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes neonFloat {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.4;
+  }
+  25% { 
+    transform: translateY(-20px) translateX(10px) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: translateY(-10px) translateX(-5px) rotate(180deg);
+    opacity: 0.6;
+  }
+  75% { 
+    transform: translateY(-30px) translateX(-10px) rotate(270deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes neonTrail {
+  0% { 
+    transform: translateX(-100vw) translateY(100vh) rotate(0deg);
+    opacity: 0;
+    box-shadow: 0 0 0px rgba(0, 212, 255, 0);
+  }
+  10% { 
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+  }
+  90% { 
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+  }
+  100% { 
+    transform: translateX(100vw) translateY(-100vh) rotate(360deg);
+    opacity: 0;
+    box-shadow: 0 0 0px rgba(0, 212, 255, 0);
+  }
+}
+
+@keyframes neonOrb {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+    filter: blur(2px);
+  }
+  33% { 
+    transform: translate(50px, -30px) scale(1.2);
+    opacity: 0.7;
+    filter: blur(1px);
+  }
+  66% { 
+    transform: translate(-30px, 20px) scale(0.8);
+    opacity: 0.5;
+    filter: blur(3px);
+  }
+}
+
+@keyframes gridShimmer {
+  0%, 100% { 
+    opacity: 0.05;
+    background-position: 0 0;
+  }
+  50% { 
+    opacity: 0.15;
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes dataStream {
+  0% { 
+    transform: translateY(100vh) translateX(0px);
+    opacity: 0;
+  }
+  10% { 
+    opacity: 1;
+  }
+  90% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(-100px) translateX(0px);
+    opacity: 0;
+  }
+}
+
+@keyframes hexRotate {
+  0% { 
+    transform: rotate(0deg) scale(1);
+    opacity: 0.2;
+  }
+  50% { 
+    transform: rotate(180deg) scale(1.1);
+    opacity: 0.6;
+  }
+  100% { 
+    transform: rotate(360deg) scale(1);
+    opacity: 0.2;
+  }
+}
+
+@keyframes waveFlow {
+  0%, 100% { 
+    transform: translateX(-100px) scaleY(1);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: translateX(100px) scaleY(1.5);
+    opacity: 0.7;
+  }
+}
+
+.neon-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Subtle Grid */
+.neon-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridShimmer 8s ease-in-out infinite;
+}
+
+/* Floating Neon Orbs */
+.neon-orb {
+  position: absolute;
+  border-radius: 50%;
+  animation: neonOrb 12s ease-in-out infinite;
+}
+
+.neon-orb-1 {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  left: 10%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.3) 0%, rgba(0, 212, 255, 0.05) 70%, transparent 100%);
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+.neon-orb-2 {
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  right: 15%;
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.3) 0%, rgba(0, 255, 136, 0.05) 70%, transparent 100%);
+  animation-delay: -5s;
+  animation-duration: 18s;
+}
+
+.neon-orb-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 30%;
+  left: 20%;
+  background: radial-gradient(circle, rgba(170, 0, 255, 0.2) 0%, rgba(170, 0, 255, 0.03) 70%, transparent 100%);
+  animation-delay: -10s;
+  animation-duration: 20s;
+}
+
+/* Minimal Floating Elements */
+.neon-particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 212, 255, 0.6);
+  border-radius: 50%;
+  animation: neonFloat 10s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+}
+
+.neon-particle:nth-child(5) {
+  top: 25%;
+  left: 30%;
+  animation-delay: -2s;
+  background: rgba(0, 255, 136, 0.6);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
+}
+
+.neon-particle:nth-child(6) {
+  top: 70%;
+  left: 70%;
+  animation-delay: -6s;
+  background: rgba(255, 0, 128, 0.6);
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.8);
+}
+
+.neon-particle:nth-child(7) {
+  top: 40%;
+  right: 25%;
+  animation-delay: -4s;
+  background: rgba(255, 170, 0, 0.6);
+  box-shadow: 0 0 10px rgba(255, 170, 0, 0.8);
+}
+
+/* Traveling Light Trails */
+.neon-trail {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(45deg, rgba(0, 212, 255, 0.8), rgba(0, 255, 136, 0.8));
+  border-radius: 50%;
+  animation: neonTrail 25s linear infinite;
+}
+
+.neon-trail:nth-child(9) {
+  animation-delay: -8s;
+  animation-duration: 30s;
+}
+
+.neon-trail:nth-child(10) {
+  animation-delay: -15s;
+  animation-duration: 35s;
+}
+
+/* Pulsing Accent Dots */
+.neon-accent {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(0, 212, 255, 0.9);
+  border-radius: 50%;
+  animation: neonPulse 6s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+}
+
+.neon-accent:nth-child(11) {
+  top: 15%;
+  left: 60%;
+  animation-delay: -1s;
+}
+
+.neon-accent:nth-child(12) {
+  bottom: 20%;
+  right: 40%;
+  animation-delay: -3s;
+  background: rgba(0, 255, 136, 0.9);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+}
+
+.neon-accent:nth-child(13) {
+  top: 80%;
+  left: 80%;
+  animation-delay: -5s;
+  background: rgba(170, 0, 255, 0.9);
+  box-shadow: 0 0 15px rgba(170, 0, 255, 0.6);
+}
+
+/* Enhanced Data Stream Animation */
+.data-stream {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 212, 255, 0.8), transparent);
+  animation: dataStream 12s linear infinite;
+}
+
+.data-stream:nth-child(14) {
+  left: 5%;
+  animation-delay: -1s;
+}
+
+.data-stream:nth-child(15) {
+  left: 25%;
+  animation-delay: -4s;
+  background: linear-gradient(to bottom, transparent, rgba(0, 255, 136, 0.8), transparent);
+}
+
+.data-stream:nth-child(16) {
+  left: 45%;
+  animation-delay: -7s;
+  background: linear-gradient(to bottom, transparent, rgba(170, 0, 255, 0.8), transparent);
+}
+
+.data-stream:nth-child(17) {
+  left: 65%;
+  animation-delay: -10s;
+  background: linear-gradient(to bottom, transparent, rgba(255, 170, 0, 0.8), transparent);
+}
+
+.data-stream:nth-child(18) {
+  left: 85%;
+  animation-delay: -13s;
+  background: linear-gradient(to bottom, transparent, rgba(255, 0, 128, 0.8), transparent);
+}
+
+/* Hexagonal Tech Elements */
+.hex-element {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  transform: rotate(0deg);
+  animation: hexRotate 20s linear infinite;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+}
+
+.hex-element:nth-child(19) {
+  top: 10%;
+  right: 20%;
+  animation-delay: -2s;
+  border-color: rgba(0, 255, 136, 0.3);
+}
+
+.hex-element:nth-child(20) {
+  bottom: 15%;
+  left: 35%;
+  animation-delay: -8s;
+  border-color: rgba(170, 0, 255, 0.3);
+}
+
+/* Energy Wave Effects */
+.energy-wave {
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.6), transparent);
+  animation: waveFlow 15s ease-in-out infinite;
+}
+
+.energy-wave:nth-child(21) {
+  top: 30%;
+  left: -100px;
+  animation-delay: -3s;
+}
+
+.energy-wave:nth-child(22) {
+  bottom: 40%;
+  right: -100px;
+  animation-delay: -9s;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.6), transparent);
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
