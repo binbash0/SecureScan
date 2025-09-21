@@ -25,17 +25,20 @@ This solution was built for the **AI & DePIN Track** at the **Hedera Africa Hack
 ---
 
 ## 📂 Project Structure
-├── contracts/ # Solidity smart contracts
-├── src/ # React frontend
-│ ├── components/ # UI components
-│ ├── pages/ # Main pages (Home, Market, Profile)
-│ ├── hooks/ # Custom React hooks
-│ └── utils/ # Ethers.js & BlockDAG helpers
-├── test/ # Smart contract tests
-├── hardhat.config.js # Hardhat setup
-├── package.json
-└── README.md
 
+```bash
+.
+├── contracts/              # Solidity smart contracts
+├── src/                    # React frontend
+│   ├── components/         # UI components
+│   ├── pages/              # Main pages (Home, Market, Profile)
+│   ├── hooks/              # Custom React hooks
+│   └── utils/              # Ethers.js & BlockDAG helpers
+├── test/                   # Smart contract tests
+├── hardhat.config.js       # Hardhat setup
+├── package.json            # Project dependencies & scripts
+└── README.md               # Project documentation
+```
 
 ---
 
