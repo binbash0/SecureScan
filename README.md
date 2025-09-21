@@ -1,9 +1,9 @@
 # 🔒 SecureScan Prediction Market
 
-![React](https://img.shields.io/badge/Frontend-React-blue?logo=react)
-![Solidity](https://img.shields.io/badge/SmartContracts-Solidity-black?logo=solidity)
-![BlockDAG](https://img.shields.io/badge/Blockchain-BlockDAG-purple)
-![License](https://img.shields.io/badge/License-MIT-green)
+[![React](https://img.shields.io/badge/Frontend-React-blue?logo=react)](https://react.dev/)
+[![Solidity](https://img.shields.io/badge/Smart%20Contracts-Solidity-black?logo=solidity)](https://soliditylang.org/)
+[![BlockDAG](https://img.shields.io/badge/Blockchain-BlockDAG-purple)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
 ---
 
